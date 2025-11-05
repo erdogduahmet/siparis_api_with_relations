@@ -1,4 +1,6 @@
-	package com.ahmeterdogdu.dto;
+package com.ahmeterdogdu.dto;
+
+import java.util.List;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,7 +12,12 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class DtoOrderIU {
+
+	private int customerId;
 	
-	private DtoCustomer customer;
+	private String status;
+	
+	private List<Integer> productIds;
+	
 	
 }

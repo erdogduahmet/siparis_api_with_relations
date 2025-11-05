@@ -1,8 +1,14 @@
 package com.ahmeterdogdu.dto;
 
+import java.util.List;
+
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class DtoCustomerIU {
 	
 	private String firstName;
@@ -10,5 +16,7 @@ public class DtoCustomerIU {
 	private String lastName;
 	
 	private String eMail;
+	
+	private List<Integer> orderIds;
 	
 }

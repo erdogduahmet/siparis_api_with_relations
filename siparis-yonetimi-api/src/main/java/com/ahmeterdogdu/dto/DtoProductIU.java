@@ -1,8 +1,12 @@
 package com.ahmeterdogdu.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class DtoProductIU {
 
 	private String name;
