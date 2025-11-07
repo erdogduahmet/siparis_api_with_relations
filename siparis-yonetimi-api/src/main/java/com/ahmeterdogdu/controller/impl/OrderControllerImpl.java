@@ -18,6 +18,8 @@ import com.ahmeterdogdu.dto.DtoOrder;
 import com.ahmeterdogdu.dto.DtoOrderIU;
 import com.ahmeterdogdu.services.IOrderService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("rest/api/order")
 public class OrderControllerImpl implements IOrderController {
@@ -39,7 +41,7 @@ public class OrderControllerImpl implements IOrderController {
 
 	@PostMapping("/add")
 	@Override
-	public DtoOrder createOrder(@RequestBody DtoOrderIU dtoOrderIU) {
+	public DtoOrder createOrder(@RequestBody @Valid DtoOrderIU dtoOrderIU) {
 		return orderService.createOrder(dtoOrderIU);
 	}
 

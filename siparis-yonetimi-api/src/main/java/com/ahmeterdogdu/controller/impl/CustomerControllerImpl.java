@@ -17,6 +17,8 @@ import com.ahmeterdogdu.dto.DtoCustomer;
 import com.ahmeterdogdu.dto.DtoCustomerIU;
 import com.ahmeterdogdu.services.ICustomerServices;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/rest/api/customer")
 public class CustomerControllerImpl implements ICustomerController {
@@ -38,7 +40,7 @@ public class CustomerControllerImpl implements ICustomerController {
 
 	@PostMapping("/save")
 	@Override
-	public DtoCustomer saveCustomer(@RequestBody DtoCustomerIU dtoCustomerIU) {
+	public DtoCustomer saveCustomer(@RequestBody @Valid DtoCustomerIU dtoCustomerIU) {
 		return customerServices.saveCustomer(dtoCustomerIU);
 	}
 
@@ -50,7 +52,7 @@ public class CustomerControllerImpl implements ICustomerController {
 
 	@PutMapping("/update/{id}")
 	@Override
-	public DtoCustomer updateCustomer(@PathVariable(name = "id") Integer id, @RequestBody DtoCustomerIU dtoCustomerIU) {
+	public DtoCustomer updateCustomer(@PathVariable(name = "id") Integer id, @RequestBody @Valid DtoCustomerIU dtoCustomerIU) {
 		return customerServices.updateCustomer(id, dtoCustomerIU);
 	}
 

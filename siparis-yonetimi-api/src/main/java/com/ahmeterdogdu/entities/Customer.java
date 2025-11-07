@@ -36,7 +36,7 @@ public class Customer {
 	private String eMail;
 	
 	//** ilişkiler **
-	@OneToMany
+	@OneToMany(mappedBy = "customer")
 	private List<Order> order;
 
 }

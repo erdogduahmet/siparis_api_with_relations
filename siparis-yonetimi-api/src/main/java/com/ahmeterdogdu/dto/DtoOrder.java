@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-//@JsonInclude(value = Include.NON_EMPTY)//customer içindeki orderdaki customer in gitmesi için
+@JsonInclude(value = Include.NON_EMPTY)//customer içindeki orderdaki customer in gitmesi için
 public class DtoOrder {
 
 	private int id;
